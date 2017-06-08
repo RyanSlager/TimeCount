@@ -11,19 +11,15 @@ namespace DurationFinder
     {
         static void Main(string[] args)
         {
-            var reg = new Regex(@"\d{1,2}\/\d{1,2}\/\d{1,4}\s{0,}\,\s{0,}\d{1,2}\/\d{1,2}\/\d{1,4}");
+            var reg = new Regex(@"\d{1,2}\/\d{1,2}\/\d{1,4}[ ]{0,}\,[ ]{0,}\d{1,2}\/\d{1,2}\/\d{1,4}");
 
             Console.WriteLine("Please enter two dates in dd/mm/yyyy format seperated by a comma");
             string datesIn = Console.ReadLine();
 
-            string tempDate = " ";
-            bool regMatch = reg.IsMatch(datesIn);
-
             while (reg.IsMatch(datesIn) != true);
             {
                 Console.WriteLine("Sorry, please make sure to enter your dates in dd/mm/yyyy format seperated by a comma.");
-                tempDate.Replace(" " , Console.ReadLine());
-                datesIn.Replace(datesIn, tempDate);
+                datesIn.Replace(datesIn, Console.ReadLine());
             }
 
             String[] dates = datesIn.Split(',');

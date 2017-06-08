@@ -21,22 +21,25 @@ namespace DurationFinder
             var parsedDates = new List<DateTime>();
 
             String[] dates = datesIn.Split(',');
+            int count = 0;
 
             foreach (string date in dates)
             {
                 DateTime parsedDate;
-                int count = 0;
-
-                Console.WriteLine(date.Trim());
+                
                 if (DateTime.TryParseExact(date.Trim(), formats, new CultureInfo("es"), DateTimeStyles.None, out parsedDate))
                 {
                     parsedDates.Add(parsedDate);
-                    count++;
                 }
                 else
                 {
                     Console.WriteLine("Sorry, your dates need to be in mm/dd/yyyy format seperated by a comma.");
+                    Console.WriteLine("Please enter the {0} date in the correct format. ", count == 0 ? "first" : "second");
+                    while (!DateTime.TryParseExact(Console.ReadLine().Trim(), formats, new CultureInfo("es"), DateTimeStyles.None, out parsedDate))
+                        Console.WriteLine("Please enter the {0} date in the correct format. ", count == 0 ? "first" : "second");
+                    parsedDates.Add(parsedDate);
                 }
+                count++;
             }
 
 

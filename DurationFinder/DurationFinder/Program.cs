@@ -21,8 +21,16 @@ namespace DurationFinder
             var parsedDates = new List<DateTime>();
 
             String[] dates = datesIn.Split(',');
-            int count = 0;
 
+            while(dates.Length != 2)
+            {   
+                Console.WriteLine("Please enter only two dates, in the mm/dd/yyyy format seperated by a comma");
+                dates = Console.ReadLine().Split(',');
+            }
+                
+
+            int count = 0;
+          
             foreach (string date in dates)
             {
                 DateTime parsedDate;

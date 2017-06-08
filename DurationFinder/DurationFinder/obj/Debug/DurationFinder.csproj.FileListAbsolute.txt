@@ -1,0 +1,6 @@
+C:\Users\slage\Desktop\C# Bootcamp\TimeCount\DurationFinder\DurationFinder\bin\Debug\DurationFinder.exe.config
+C:\Users\slage\Desktop\C# Bootcamp\TimeCount\DurationFinder\DurationFinder\bin\Debug\DurationFinder.exe
+C:\Users\slage\Desktop\C# Bootcamp\TimeCount\DurationFinder\DurationFinder\bin\Debug\DurationFinder.pdb
+C:\Users\slage\Desktop\C# Bootcamp\TimeCount\DurationFinder\DurationFinder\obj\Debug\DurationFinder.csprojResolveAssemblyReference.cache
+C:\Users\slage\Desktop\C# Bootcamp\TimeCount\DurationFinder\DurationFinder\obj\Debug\DurationFinder.exe
+C:\Users\slage\Desktop\C# Bootcamp\TimeCount\DurationFinder\DurationFinder\obj\Debug\DurationFinder.pdb
